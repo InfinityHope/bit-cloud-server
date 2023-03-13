@@ -111,13 +111,6 @@ export class TrackController {
         return this.trackService.getAllTracks(limit, page, query)
     }
 
-    @ApiOperation({
-        summary: 'Скачивание аудио файла',
-    })
-    @ApiResponse({
-        status: 201,
-        type: Blob,
-    })
     @Get('download/:trackId')
     download(@Param('trackId') trackId: number, @Res() res: Response) {
         return this.trackService.downloadAudio(trackId, res)
