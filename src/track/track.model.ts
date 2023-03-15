@@ -36,7 +36,7 @@ export class Track extends Model<Track, TrackCreationAttrs> {
     resources: string
 
     @ApiProperty({ example: '158', description: 'Duration of audio in seconds' })
-    @Column({ type: DataType.NUMBER, allowNull: false })
+    @Column({ type: DataType.INTEGER, allowNull: false })
     audio_duration: number
 
     @ApiProperty({
